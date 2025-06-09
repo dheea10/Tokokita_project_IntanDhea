@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Detail Produk - TokoKita</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+  <!-- HEADER -->
+  <header class="bg-white shadow-md">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+      <h1 class="text-2xl font-bold text-blue-600">Toko<span class="text-gray-900">Kita</span></h1>
+      <div class="space-x-4">
+        <a href="index.html" class="hover:text-blue-600">Home</a>
+        <a href="keranjang.html" class="hover:text-blue-600">🛒 Keranjang</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- DETAIL PRODUK -->
+  <main class="max-w-7xl mx-auto px-4 py-12 grid md:grid-cols-2 gap-10">
+    <img src="https://via.placeholder.com/400" alt="Produk" class="rounded shadow" />
+    
+    <div>
+      <h2 class="text-2xl font-bold mb-2">Nama Produk</h2>
+      <p class="text-blue-600 text-xl font-semibold mb-4">Rp 150.000</p>
+      <p class="mb-6 text-gray-700">Deskripsi lengkap produk ini. Menjelaskan fitur, kelebihan, bahan, dan info lainnya.</p>
+      
+      <label for="jumlah" class="block mb-2 font-semibold">Jumlah:</label>
+      <input id="jumlah" type="number" value="1" min="1" class="border px-3 py-2 rounded w-20 mb-4" />
+      
+      <button class="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700 w-full">Tambah ke Keranjang</button>
+    </div>
+  </main>
+
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Keranjang Belanja - TokoKita</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+  <!-- HEADER -->
+  <header class="bg-white shadow-md">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+      <h1 class="text-2xl font-bold text-blue-600">Toko<span class="text-gray-900">Kita</span></h1>
+      <div>
+        <a href="index.html" class="hover:text-blue-600">Home</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ISI KERANJANG -->
+  <main class="max-w-7xl mx-auto px-4 py-12">
+    <h2 class="text-xl font-bold mb-6">Keranjang Belanja Anda</h2>
+
+    <!-- Tabel Produk -->
+    <div class="overflow-x-auto">
+      <table class="min-w-full bg-white rounded shadow-md">
+        <thead>
+          <tr class="text-left bg-gray-100">
+            <th class="p-4">Produk</th>
+            <th class="p-4">Harga</th>
+            <th class="p-4">Jumlah</th>
+            <th class="p-4">Total</th>
+            <th class="p-4">Aksi</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="p-4">Nama Produk 1</td>
+            <td class="p-4">Rp 120.000</td>
+            <td class="p-4">
+              <input type="number" value="1" min="1" class="border px-2 w-16" />
+            </td>
+            <td class="p-4">Rp 120.000</td>
+            <td class="p-4">
+              <button class="text-red-600 hover:underline">Hapus</button>
+            </td>
+          </tr>
+          <!-- Tambah baris produk lain di sini -->
+        </tbody>
+      </table>
+    </div>
+
+    <!-- RINGKASAN -->
+    <div class="mt-6 flex justify-between items-center">
+      <p class="text-lg font-semibold">Total: <span class="text-blue-600">Rp 120.000</span></p>
+      <a href="#" class="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700">Checkout</a>
+    </div>
+  </main>
+
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Checkout - TokoKita</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+  <!-- HEADER -->
+  <header class="bg-white shadow-md">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+      <h1 class="text-2xl font-bold text-blue-600">Toko<span class="text-gray-900">Kita</span></h1>
+      <a href="index.html" class="hover:text-blue-600">Home</a>
+    </div>
+  </header>
+
+  <!-- CHECKOUT -->
+  <main class="max-w-7xl mx-auto px-4 py-12 grid md:grid-cols-2 gap-10">
+    
+    <!-- Formulir Pengiriman -->
+    <div>
+      <h2 class="text-xl font-bold mb-6">Informasi Pengiriman</h2>
+      <form class="space-y-4">
+        <div>
+          <label class="block font-semibold mb-1">Nama Lengkap</label>
+          <input type="text" class="w-full border px-4 py-2 rounded" placeholder="Nama Anda" required />
+        </div>
+        <div>
+          <label class="block font-semibold mb-1">Email</label>
+          <input type="email" class="w-full border px-4 py-2 rounded" placeholder="email@contoh.com" required />
+        </div>
+        <div>
+          <label class="block font-semibold mb-1">No. Telepon</label>
+          <input type="tel" class="w-full border px-4 py-2 rounded" placeholder="08xxxxxxxxxx" required />
+        </div>
+        <div>
+          <label class="block font-semibold mb-1">Alamat Lengkap</label>
+          <textarea class="w-full border px-4 py-2 rounded" rows="3" placeholder="Nama jalan, kota, kode pos..." required></textarea>
+        </div>
+        <div>
+          <label class="block font-semibold mb-1">Metode Pembayaran</label>
+          <select class="w-full border px-4 py-2 rounded">
+            <option>Transfer Bank</option>
+            <option>COD (Bayar di Tempat)</option>
+            <option>E-Wallet (OVO, DANA, Gopay)</option>
+          </select>
+        </div>
+      </form>
+    </div>
+
+    <!-- Ringkasan Belanja -->
+    <div>
+      <h2 class="text-xl font-bold mb-6">Ringkasan Pesanan</h2>
+      <div class="bg-white rounded shadow p-6 space-y-4">
+        <div class="flex justify-between">
+          <span>Nama Produk 1 (x1)</span>
+          <span>Rp 120.000</span>
+        </div>
+        <div class="flex justify-between">
+          <span>Nama Produk 2 (x2)</span>
+          <span>Rp 190.000</span>
+        </div>
+        <hr />
+        <div class="flex justify-between font-bold text-lg">
+          <span>Total</span>
+          <span>Rp 310.000</span>
+        </div>
+        <button class="mt-4 w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700">
+          Konfirmasi & Bayar
+        </button>
+      </div>
+    </div>
+
+  </main>
+
+</body>
+</html>
+
+<!-- Footer Sosial -->
+<footer class="bg-gray-800 text-white py-8">
+  <div class="max-w-7xl mx-auto px-4 text-center space-y-4">
+    <p>&copy; 2025 TokoKita. Semua Hak Dilindungi.</p>
+    <div class="flex justify-center gap-6">
+      <a href="https://wa.me/6281234567890" target="_blank" title="WhatsApp">
+        <img src="https://img.icons8.com/color/32/whatsapp.png" alt="WhatsApp" />
+      </a>
+      <a href="https://instagram.com/namaakun" target="_blank" title="Instagram">
+        <img src="https://img.icons8.com/color/32/instagram-new.png" alt="Instagram" />
+      </a>
+      <a href="https://tiktok.com/@namaakun" target="_blank" title="TikTok">
+        <img src="https://img.icons8.com/color/32/tiktok.png" alt="TikTok" />
+      </a>
+    </div>
+  </div>
+</footer>
