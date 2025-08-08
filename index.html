@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Style Kita - Fashion E-Commerce</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <h1>Style Kita</h1>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#products">Produk</a></li>
+                        <li><a href="#about">Tentang</a></li>
+                        <li><a href="#contact">Kontak</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <h2>Temukan Style Terbaikmu</h2>
+                <p>Koleksi fashion terkini dengan kualitas terbaik untuk gaya hidup modern Anda</p>
+                <a href="#products" class="btn">Belanja Sekarang</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products" id="products">
+        <div class="container">
+            <h2 class="section-title">Produk Unggulan</h2>
+            <div class="products-grid">
+                <!-- Product 1 -->
+                <div class="product-card fade-in">
+                    <div class="product-image">
+                        <span>Kemeja Kasual Premium</span>
+                    </div>
+                    <div class="product-info">
+                        <h3>Kemeja Kasual Premium</h3>
+                        <p>Kemeja kasual berkualitas tinggi dengan bahan katun premium yang nyaman digunakan sehari-hari. Tersedia dalam berbagai warna dan ukuran.</p>
+                        <div class="product-price">Rp 299.000</div>
+                        <button class="add-to-cart" onclick="addToCart('Kemeja Kasual Premium')">Tambah ke Keranjang</button>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="product-card fade-in">
+                    <div class="product-image">
+                        <span>Dress Elegant Modern</span>
+                    </div>
+                    <div class="product-info">
+                        <h3>Dress Elegant Modern</h3>
+                        <p>Dress elegant dengan desain modern yang cocok untuk acara formal maupun semi-formal. Dibuat dari bahan berkualitas dengan cutting yang sempurna.</p>
+                        <div class="product-price">Rp 450.000</div>
+                        <button class="add-to-cart" onclick="addToCart('Dress Elegant Modern')">Tambah ke Keranjang</button>
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="product-card fade-in">
+                    <div class="product-image">
+                        <span>Jaket Denim Stylish</span>
+                    </div>
+                    <div class="product-info">
+                        <h3>Jaket Denim Stylish</h3>
+                        <p>Jaket denim dengan gaya vintage yang tak lekang waktu. Perfect untuk tampilan kasual yang tetap stylish dan trendy.</p>
+                        <div class="product-price">Rp 375.000</div>
+                        <button class="add-to-cart" onclick="addToCart('Jaket Denim Stylish')">Tambah ke Keranjang</button>
+                    </div>
+                </div>
+
+                <!-- Product 4 -->
+                <div class="product-card fade-in">
+                    <div class="product-image">
+                        <span>Celana Chino Premium</span>
+                    </div>
+                    <div class="product-info">
+                        <h3>Celana Chino Premium</h3>
+                        <p>Celana chino dengan bahan premium yang nyaman dan fleksibel. Ideal untuk gaya kasual hingga semi-formal dengan berbagai pilihan warna.</p>
+                        <div class="product-price">Rp 325.000</div>
+                        <button class="add-to-cart" onclick="addToCart('Celana Chino Premium')">Tambah ke Keranjang</button>
+                    </div>
+                </div>
+
+                <!-- Product 5 -->
+                <div class="product-card fade-in">
+                    <div class="product-image">
+                        <span>Blouse Feminine Chic</span>
+                    </div>
+                    <div class="product-info">
+                        <h3>Blouse Feminine Chic</h3>
+                        <p>Blouse dengan desain feminine yang chic dan elegan. Cocok untuk tampilan profesional di kantor atau acara casual yang memerlukan touch elegant.</p>
+                        <div class="product-price">Rp 280.000</div>
+                        <button class="add-to-cart" onclick="addToCart('Blouse Feminine Chic')">Tambah ke Keranjang</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Style Kita</h4>
+                    <p>Toko fashion online terpercaya dengan koleksi terkini dan kualitas terbaik untuk gaya hidup modern Anda.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Layanan</h4>
+                    <ul>
+                        <li><a href="#">Pengiriman Gratis</a></li>
+                        <li><a href="#">Return & Exchange</a></li>
+                        <li><a href="#">Size Guide</a></li>
+                        <li><a href="#">Customer Service</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Kontak</h4>
+                    <p>Email: info@stylekita.com<br>
+                    Phone: +62 123 456 7890<br>
+                    Address: Jakarta, Indonesia</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Style Kita. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple cart functionality
+        let cart = [];
+
+        function addToCart(productName) {
+            cart.push(productName);
+            alert(`${productName} telah ditambahkan ke keranjang!`);
+            console.log('Cart:', cart);
+        }
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Add fade-in animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
